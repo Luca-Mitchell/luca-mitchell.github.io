@@ -65,6 +65,26 @@ body {
     background-color: rgb(var(--dark));
 }
 
+#scroll-down {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: "Comfortaa";
+    z-index: 100;
+}
+
+#scroll-down p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#down-arrow {
+    font-size: 10rem;
+}
+
 #cursor {
     position: fixed;
     z-index: 1000;
@@ -393,7 +413,7 @@ textarea {
 
     .projects-title::after {
         height: 1.5rem;
-        transform: translate(3.7rem, -70%);
+        transform: translate(4.2rem, -70%);
     }
 
     .project-title {
