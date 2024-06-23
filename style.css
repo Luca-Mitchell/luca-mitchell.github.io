@@ -408,15 +408,6 @@ textarea {
         transform: translate(3.7rem, -70%);
     }
 
-    .projects-title {
-        font-size: 3rem;
-    }
-
-    .projects-title::after {
-        height: 1.5rem;
-        transform: translate(4.2rem, -70%);
-    }
-
     .project-title {
         font-size: 1rem;
     }
@@ -458,18 +449,5 @@ textarea {
     .title::after {
         height: 1rem;
         transform: translate(2.8rem, -70%);
-    }
-
-    #projects-grid {
-        grid-template-rows: repeat(3, 12rem);
-    }
-
-    .projects-title {
-        font-size: 2.5rem;
-    }
-
-    .projects-title::after {
-        height: 1.5rem;
-        transform: translate(3.7rem, -70%);
     }
 }
