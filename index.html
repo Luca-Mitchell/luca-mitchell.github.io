@@ -38,35 +38,20 @@
     <script>
         const cursor = document.getElementById("cursor")
         const magnifyingGlass = document.getElementById("magnifying-glass")
-        let mouseX = 0
-        let mouseY = 0
-        let cursorX = 0
-        let cursorY = 0
-        const lag = 0.15
 
         function moveCursor(event) {
-            mouseX = event.clientX
-            mouseY = event.clientY
-        }
-
-        function animateCursor() {
-            cursorX += (mouseX - cursorX) * lag
-            cursorY += (mouseY - cursorY) * lag
-
-            cursor.style.left = cursorX + "px"
-            cursor.style.top = cursorY + "px"
-
-            requestAnimationFrame(animateCursor);
+            cursor.style.left = event.clientX + "px"
+            cursor.style.top = event.clientY + "px"
         }
 
         function handleMouseOver(event) {
-            if (event.target.matches('a, button, [role="button"], input, textarea, select')) {
+            if (event.target.matches('a, button, input, textarea')) {
                 cursor.classList.add('enlarged')
             }
         }
 
         function handleMouseOut(event) {
-            if (event.target.matches('a, button, [role="button"], input, textarea, select')) {
+            if (event.target.matches('a, button, input, textarea')) {
                 cursor.classList.remove('enlarged')
             }
         }
@@ -74,7 +59,6 @@
         document.addEventListener('mousemove', moveCursor);
         document.addEventListener('mouseover', handleMouseOver);
         document.addEventListener('mouseout', handleMouseOut);
-        animateCursor();
     </script>
 
     <!-- HEADER -->
